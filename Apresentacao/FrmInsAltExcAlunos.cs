@@ -48,6 +48,17 @@ namespace Apresentacao
 
         }
 
+                private void MetodoSair()
+        {
+            DialogResult result = MessageBox.Show("Deseja realmente sair?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            return;
+        }
+
 
         private bool ValidarCampos()
         {
@@ -63,12 +74,13 @@ namespace Apresentacao
 
         private void FrmInsAltExcAlunos_Load(object sender, EventArgs e)
         {
-
+            MetodoPreencherFormulario();
         }
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+        
     }
 }
